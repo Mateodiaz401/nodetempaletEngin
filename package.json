@@ -1,0 +1,19 @@
+{
+  "name": "template_engin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Mateo Díaz <mateodiaz401@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.1.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "nanoid": "^4.0.2"
+  }
+}
