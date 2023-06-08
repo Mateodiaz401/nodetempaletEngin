@@ -13,7 +13,15 @@ const urlSchema = new Schema({
         unique: true,
         required: true,
     },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+        required: true,
+    }
 });
 
+urlSchema.statics.findOneAndDelete = async function (conditions) {
+    return await this.findOneAndRemove(conditions);
+};
 
 module.exports = mongoose.model("Url", urlSchema);

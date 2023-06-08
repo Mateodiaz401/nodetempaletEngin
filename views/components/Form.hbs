@@ -1,6 +1,7 @@
 
 {{#if url}}
 <form action="/editar/{{url._id}}" method="post">
+<input type="hidden" name="_csrf" value="{{csrfToken}}" />
     <input
     type="text"
     placeholder="ingrese url"
@@ -12,6 +13,7 @@
 </form>
 {{else}}
 <form action="/" method="post">
+<input type="hidden" name="_csrf" value="{{csrfToken}}" />
 <input type="text" placeholder="ingrese url" name="origin" class="form-control my-2">
 <button  type="submit" class="btn btn-primary w-100 mb-2">Agregar URL</button>
 </form>

@@ -4,13 +4,21 @@ const urlValidar = (req, res, next) => {
         const { origin } = req.body;
         const urlFrontend = new URL(origin);
         if (urlFrontend.origin !== "null") {
-            return next();
+            if (
+                urlFrontend.protocol === "http:" ||
+                urlFrontend.protocol === "https:"
+            ) {
+                return next();
+            }
+            throw new Error("tiene que tener https://");
         }
-        else {
-            throw new Error("no válida 😲");
-        }
+        throw new Error("no válida 😲");
     } catch (error) {
-        // console.log(error);
+        if (error.message === "Invalid URL") {
+            req.flash("mensajes", [{ msg: "url no válida" }]);
+        } else {
+            req.flash("mensajes", [{ msg: error.message }]);
+        }
         return res.redirect("/");
     }
 };

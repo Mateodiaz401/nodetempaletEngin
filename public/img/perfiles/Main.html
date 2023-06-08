@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:3000/auth/login -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link href="./Main_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="icon" type="image/jpg" href="http://localhost:3000/auth/img/favicon.ico">
+</head>
+
+<body cz-shortcut-listen="true">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="http://localhost:3000/">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="http://localhost:3000/">Home</a>
+                    <a class="nav-link" href="http://localhost:3000/perfil">Perfil</a>
+                    <a class="nav-link" href="http://localhost:3000/auth/register">Register</a>
+                    <a class="nav-link" href="http://localhost:3000/auth/login">LogIn</a>
+                    <a class="nav-link" href="http://localhost:3000/auth/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-2">
+        <h1 class="text-center my-5">Iniciar sesión</h1>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form action="http://localhost:3000/auth/login" method="post">
+        <input type="hidden" name="_csrf" value="DNVdVloP-tfKpLaWO2c39YZRYgVfFbZ1GZ6A">
+            <input class="form-control mb-2" name="email" placeholder="Ingrese email" type="email" value="test@prueba.com">
+            <input class="form-control mb-2" name="password" placeholder="Ingrese contraseña" type="password" value="123123">
+            <button type="submit" class="btn btn-primary">
+                Acceder
+            </button>
+        </form>
+    </div>
+</div>
+    </div>
+
+    <script src="./Main_files/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="./Main_files/app.js"></script>
+
+
+</body></html>
